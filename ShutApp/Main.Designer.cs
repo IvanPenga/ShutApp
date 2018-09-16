@@ -32,10 +32,11 @@
             this.startCountDown = new System.Windows.Forms.Timer(this.components);
             this.btnStart = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblListening = new System.Windows.Forms.Label();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnMinimize = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
-            this.lblListening = new System.Windows.Forms.Label();
             this.rlSleep = new ShutApp.ccRadioLabel();
             this.rlRestart = new ShutApp.ccRadioLabel();
             this.rlShutdown = new ShutApp.ccRadioLabel();
@@ -58,8 +59,8 @@
             this.btnStart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btnStart.ForeColor = System.Drawing.Color.White;
-            this.btnStart.Location = new System.Drawing.Point(683, 254);
-            this.btnStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStart.Location = new System.Drawing.Point(695, 274);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(4);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(159, 52);
             this.btnStart.TabIndex = 3;
@@ -73,7 +74,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(855, 12);
             this.panel1.TabIndex = 14;
@@ -81,13 +82,45 @@
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.panel1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             // 
+            // lblListening
+            // 
+            this.lblListening.AutoSize = true;
+            this.lblListening.BackColor = System.Drawing.Color.Transparent;
+            this.lblListening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblListening.ForeColor = System.Drawing.SystemColors.ActiveCaption;
+            this.lblListening.Location = new System.Drawing.Point(707, 329);
+            this.lblListening.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblListening.Name = "lblListening";
+            this.lblListening.Size = new System.Drawing.Size(128, 29);
+            this.lblListening.TabIndex = 16;
+            this.lblListening.Text = "Listening...";
+            this.lblListening.Visible = false;
+            // 
+            // btnSettings
+            // 
+            this.btnSettings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSettings.BackgroundImage = global::ShutApp.Properties.Resources.settings_white;
+            this.btnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSettings.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnSettings.FlatAppearance.BorderSize = 0;
+            this.btnSettings.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSettings.Location = new System.Drawing.Point(749, 20);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSettings.Name = "btnSettings";
+            this.btnSettings.Size = new System.Drawing.Size(36, 34);
+            this.btnSettings.TabIndex = 17;
+            this.btnSettings.UseVisualStyleBackColor = false;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.BackgroundImage = global::ShutApp.Properties.Resources.wilmington_divider_white;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(704, 241);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(716, 261);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(115, 17);
             this.panel2.TabIndex = 15;
@@ -103,7 +136,7 @@
             this.btnMinimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMinimize.Location = new System.Drawing.Point(793, 20);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(24, 21);
             this.btnMinimize.TabIndex = 9;
@@ -123,7 +156,7 @@
             this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(821, 20);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(24, 21);
             this.btnExit.TabIndex = 8;
@@ -131,20 +164,6 @@
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             this.btnExit.MouseEnter += new System.EventHandler(this.btnExit_MouseEnter);
             this.btnExit.MouseLeave += new System.EventHandler(this.btnExit_MouseLeave);
-            // 
-            // lblListening
-            // 
-            this.lblListening.AutoSize = true;
-            this.lblListening.BackColor = System.Drawing.Color.Transparent;
-            this.lblListening.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblListening.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.lblListening.Location = new System.Drawing.Point(695, 309);
-            this.lblListening.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblListening.Name = "lblListening";
-            this.lblListening.Size = new System.Drawing.Size(128, 29);
-            this.lblListening.TabIndex = 16;
-            this.lblListening.Text = "Listening...";
-            this.lblListening.Visible = false;
             // 
             // rlSleep
             // 
@@ -154,7 +173,7 @@
             this.rlSleep.Enable = true;
             this.rlSleep.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rlSleep.ForeColor = System.Drawing.Color.White;
-            this.rlSleep.Location = new System.Drawing.Point(711, 127);
+            this.rlSleep.Location = new System.Drawing.Point(723, 147);
             this.rlSleep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rlSleep.Name = "rlSleep";
             this.rlSleep.Size = new System.Drawing.Size(83, 31);
@@ -169,7 +188,7 @@
             this.rlRestart.Enable = true;
             this.rlRestart.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rlRestart.ForeColor = System.Drawing.Color.White;
-            this.rlRestart.Location = new System.Drawing.Point(701, 180);
+            this.rlRestart.Location = new System.Drawing.Point(713, 200);
             this.rlRestart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rlRestart.Name = "rlRestart";
             this.rlRestart.Size = new System.Drawing.Size(103, 31);
@@ -184,7 +203,7 @@
             this.rlShutdown.Enable = true;
             this.rlShutdown.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.rlShutdown.ForeColor = System.Drawing.Color.White;
-            this.rlShutdown.Location = new System.Drawing.Point(685, 69);
+            this.rlShutdown.Location = new System.Drawing.Point(697, 89);
             this.rlShutdown.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.rlShutdown.Name = "rlShutdown";
             this.rlShutdown.Size = new System.Drawing.Size(135, 31);
@@ -193,33 +212,45 @@
             // 
             // ucSeconds
             // 
+            this.ucSeconds.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucSeconds.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ucSeconds.IsHour = false;
-            this.ucSeconds.Location = new System.Drawing.Point(448, 17);
+            this.ucSeconds.Location = new System.Drawing.Point(245, 37);
             this.ucSeconds.Margin = new System.Windows.Forms.Padding(5);
             this.ucSeconds.Name = "ucSeconds";
-            this.ucSeconds.Size = new System.Drawing.Size(229, 340);
+            this.ucSeconds.Size = new System.Drawing.Size(223, 331);
             this.ucSeconds.TabIndex = 2;
             this.ucSeconds.Time = 0;
             this.ucSeconds.TimeStampHMS = "Seconds";
             // 
             // ucMinutes
             // 
+            this.ucMinutes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucMinutes.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ucMinutes.IsHour = false;
-            this.ucMinutes.Location = new System.Drawing.Point(229, 17);
+            this.ucMinutes.Location = new System.Drawing.Point(468, 37);
             this.ucMinutes.Margin = new System.Windows.Forms.Padding(5);
             this.ucMinutes.Name = "ucMinutes";
-            this.ucMinutes.Size = new System.Drawing.Size(233, 340);
+            this.ucMinutes.Size = new System.Drawing.Size(223, 331);
             this.ucMinutes.TabIndex = 1;
             this.ucMinutes.Time = 0;
             this.ucMinutes.TimeStampHMS = "Minutes";
             // 
             // ucHours
             // 
+            this.ucHours.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucHours.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ucHours.IsHour = true;
-            this.ucHours.Location = new System.Drawing.Point(7, 17);
+            this.ucHours.Location = new System.Drawing.Point(19, 37);
             this.ucHours.Margin = new System.Windows.Forms.Padding(5);
             this.ucHours.Name = "ucHours";
-            this.ucHours.Size = new System.Drawing.Size(245, 340);
+            this.ucHours.Size = new System.Drawing.Size(226, 331);
             this.ucHours.TabIndex = 0;
             this.ucHours.Time = 0;
             this.ucHours.TimeStampHMS = "Hours";
@@ -229,7 +260,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(855, 367);
+            this.ClientSize = new System.Drawing.Size(855, 404);
+            this.Controls.Add(this.btnSettings);
             this.Controls.Add(this.lblListening);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -242,8 +274,9 @@
             this.Controls.Add(this.ucSeconds);
             this.Controls.Add(this.ucMinutes);
             this.Controls.Add(this.ucHours);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,6 +303,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblListening;
+        private System.Windows.Forms.Button btnSettings;
     }
 }
 

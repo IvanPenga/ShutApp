@@ -30,12 +30,7 @@ namespace ShutApp
             }
         }
 
-        private bool enabled = true;
-        public bool Enable
-        {
-            get { return enabled; }
-            set { enabled = value; }
-        }
+        public bool Enable { get; set; } = true;
 
         public ccRadioLabel()
         {
@@ -46,9 +41,8 @@ namespace ShutApp
         }
 
         private void CcRadioLabel_Click(object sender, EventArgs e)
-        {
-            
-            if (!enabled)
+        {           
+            if (!Enable)
             {
                 return;
             }

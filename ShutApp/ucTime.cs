@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ShutApp
@@ -17,6 +18,13 @@ namespace ShutApp
                 CheckTime();
             }
         }
+
+        public Size BtnSize
+        {
+            get { return btnDown.Size; }
+            set { btnDown.Size = value; btnUp.Size = value; }
+        }
+            
 
         public string TimeStampHMS
         {

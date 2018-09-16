@@ -10,15 +10,19 @@ namespace ShutApp
     public partial class Main : Form
     {
         SpeechRecognitionEngine recEngine = new SpeechRecognitionEngine();
+        Settings settingsScreen = new Settings();
+
         public Main()
         {
             InitializeComponent();
+
+            this.Controls.Add(settingsScreen);
+            SetDefaultOperation(Config.Read("defaultOperation"));
+
             Speech(); //enables speech recognition
             ucSeconds.greater = ucMinutes;
             ucMinutes.greater = ucHours;
             ucHours.greater = new ucTime { greater = new ucTime() };
-
-            rlShutdown.Checked = true;
         }
 
         private void startCountDown_Tick(object sender, EventArgs e)
@@ -32,6 +36,20 @@ namespace ShutApp
             else
             {
                 ucSeconds.Time--;
+            }
+        }
+
+        private void SetDefaultOperation(string operation)
+        {
+            switch (operation)
+            {
+                case "Shutdown": rlShutdown.Checked = true ; break;
+                case "Sleep": rlSleep.Checked = true; break;
+                case "Restart": rlRestart.Checked = true;  break;
+
+                default:
+                    rlShutdown.Checked = true;
+                    break;
             }
         }
 
@@ -54,7 +72,7 @@ namespace ShutApp
             }
             if (rlSleep.Checked)
             {
-
+                Application.SetSuspendState(PowerState.Suspend, true, true);
             }
         }
 
@@ -247,6 +265,10 @@ namespace ShutApp
             ucSeconds.Time = seconds;
         }
 
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            settingsScreen.Show();
+        }
     }
 
 }

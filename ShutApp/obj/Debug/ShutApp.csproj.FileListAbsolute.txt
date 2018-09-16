@@ -19,3 +19,4 @@ C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.csproj.GenerateRes
 C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.csproj.CoreCompileInputs.cache
 C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.exe
 C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.pdb
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.Settings.resources

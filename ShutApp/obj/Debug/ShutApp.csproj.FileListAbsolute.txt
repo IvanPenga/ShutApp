@@ -8,3 +8,14 @@ C:\Users\ivanp\Documents\Visual Studio 2015\Projects\PI\Samo korisne aplikacije\
 C:\Users\ivanp\Documents\Visual Studio 2015\Projects\PI\Samo korisne aplikacije\ShutApp\ShutApp\obj\Debug\ShutApp.ucTime.resources
 C:\Users\ivanp\Documents\Visual Studio 2015\Projects\PI\Samo korisne aplikacije\ShutApp\ShutApp\obj\Debug\ShutApp.Main.resources
 C:\Users\ivanp\Documents\Visual Studio 2015\Projects\PI\Samo korisne aplikacije\ShutApp\ShutApp\obj\Debug\ShutApp.csprojResolveAssemblyReference.cache
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\bin\Debug\ShutApp.exe.config
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\bin\Debug\ShutApp.exe
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\bin\Debug\ShutApp.pdb
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.csprojAssemblyReference.cache
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.Main.resources
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.Properties.Resources.resources
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.ucTime.resources
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.csproj.GenerateResource.cache
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.csproj.CoreCompileInputs.cache
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.exe
+C:\Users\ivanp\source\repos\ShutApp\ShutApp\obj\Debug\ShutApp.pdb

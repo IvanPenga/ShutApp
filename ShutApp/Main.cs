@@ -45,10 +45,6 @@ namespace ShutApp
                 Process.Start(psi);
 
             }
-            if (rlHibernate.Checked)
-            {
-
-            }
             if (rlRestart.Checked)
             {
                 var psi = new ProcessStartInfo("shutdown", "/r /t 0");
@@ -66,7 +62,6 @@ namespace ShutApp
         {
             IsStart = false;
             btnStart.Text = "Stop";
-            DisableAllButtons();
             AllRadioLabelsEnabled(false);
 
             startCountDown.Start();
@@ -75,7 +70,6 @@ namespace ShutApp
         {
             IsStart = true;
             btnStart.Text = "Start";
-            EnableAllButtons();
             AllRadioLabelsEnabled(true);
 
             startCountDown.Stop();
@@ -97,7 +91,6 @@ namespace ShutApp
         private void AllRadioLabelsEnabled(bool state)
         {
             rlShutdown.Enable = state;
-            rlHibernate.Enable = state;
             rlRestart.Enable = state;
             rlSleep.Enable = state;
         }
@@ -220,6 +213,7 @@ namespace ShutApp
             } 
             if (okPenga == true) ListenNextTask(e.Result.Text);
         }
+
         private void ListenNextTask(string sentence)
         {
             switch (sentence)
